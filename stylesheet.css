@@ -178,6 +178,7 @@ a.header-name.w--current:visited {
 @media screen and (max-width: 991px) {
   a.header-name.w--current {
     text-align: center;
+    font-size: 80px;
   }
 }
 
