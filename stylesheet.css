@@ -5,6 +5,12 @@ body {
 }
 
 
+body.background-color {
+    position: relative;
+    z-index: 1;
+    transform: skewY(-1.5deg);
+    
+}
 
 
 header {
@@ -12,9 +18,36 @@ header {
     /* position: relative;     */
     margin-right: auto;
     margin-left: auto;
+    padding: 20px;
     text-align: center;
     
 }
+
+h1 {
+    font-family: Gotham,sans-serif;
+    color: #4e7baa;
+    font-size: 3em;
+}
+
+h1:hover {
+    color: #6cc2b1;
+    text-shadow: 1px 0 0 #20a000, -4px -5px 0 rgb(61 255 0 / 8%);
+    cursor: pointer;
+}
+
+h2, h3 {
+    font-family: Circular,sans-serif;
+    color: #275179;
+    text-align: center;
+}
+
+h4 {
+    font-family: Avenir,Tahoma,sans-serif;
+    color: #1b5469;
+    font-size: 0.85em;
+    text-align: center;
+}
+
 
 .cards {
     background-color: #F4F4F4;
@@ -35,6 +68,7 @@ header {
         grid-template-columns: 1fr 1fr 1fr;
         margin: 0 20%;
     }
+    
 }
 
 
@@ -52,21 +86,44 @@ header {
      cursor: pointer;
  }
 
+.card_title {
+    font-size: 2.5em;
+    border: none;
+    margin-bottom: 2px;
+}
+
+@media (min-width:720px) {
+    .card_title {
+        font-size: 1.6em;
+    }
+}
+
+.card_title_h4 {
+    margin-top: 2px;
+    margin-bottom: 30px;
+}
 
 
 .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
+    justify-content: center;
     list-style: none;
     padding: 0;
+
 
 }
 
 
 .tag {
-    background-color: rgb(230, 225, 225);
-    padding: 0.3em;
+    background-color: #e6e6dd;
+    padding: 4px 10px;
+    font-family: Avenir,Helvetica,Arial,sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 200;
     border-radius: 3px;
 }
 
@@ -78,18 +135,56 @@ header {
 
 /* The Blog post section  */
 
-.blog_section {
-    background-color: #F4F4F4;
+.blog_posts {
+    margin: 0.5em;
+
     
 }
 
+.blog_section {
+    background-color: #F4F4F4;
+    color: rgb(44, 77, 107);
+    font-size: 20px;
+    font-family: Avenir, Tahoma, sans-serif;
+    font-weight: 700;
+    margin-top: 25px;      
+    margin-bottom: 20px; 
+}
 
+
+.posts {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: 400;
+    color: rgb(50, 74, 97);
+    line-height: 25px;
+        
+    }
+
+.post {
+    margin-bottom: 20px;
+}
+
+
+a {
+    text-decoration: none;
+    color: rgb(50, 74, 97);
+
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 
 @media (min-width:720px)  {
     .blog_posts {
         display: inline-block;
-        margin: 0.5em;
+        
         margin: 0 20%;   
     
     }
